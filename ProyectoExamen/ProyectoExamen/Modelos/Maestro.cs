@@ -25,7 +25,25 @@ namespace ProyectoExamen.Modelos
             this.salario = SALARIO_POR_HORA * totalHorasTrabajadas;
         }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"\nNombre del maestro: {nombreMaestro}");
+            sb.AppendLine("Materias que imparte:");
+            foreach (Materia materia in listaClases)
+            {
 
+                sb.AppendLine($"- Fase: {materia.faseClase}\tSemana: {materia.semanaClase} \tTipo de Clase: {materia.tipoClase()} \tDuracion: {materia.Duracion}");
+               
+            }
+            sb.AppendLine($"Horas trabajadas: {totalHorasTrabajadas}");
+            return sb.ToString();
+        }
+
+        public string listarAlumnosClase(Materia materia)
+        {
+            return materia.listarAlumnos();
+        }
 
 
 

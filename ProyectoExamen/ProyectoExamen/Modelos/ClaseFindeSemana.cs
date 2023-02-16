@@ -10,7 +10,7 @@ namespace ProyectoExamen.Modelos
     {
 
         //Utilizamos la interfaz IClase que tiene el metodo calcHorasClase
-       void IClase.calcHorasClase() {
+       public void calcHorasClase() {
             base.Duracion = 4;
         }
 

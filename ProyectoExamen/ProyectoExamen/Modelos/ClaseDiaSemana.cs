@@ -10,7 +10,7 @@ namespace ProyectoExamen.Modelos
     {
 
 
-        void IClase.calcHorasClase()
+        public void calcHorasClase()
         {
             base.Duracion = 1;
         }

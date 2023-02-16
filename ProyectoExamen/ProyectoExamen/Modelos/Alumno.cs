@@ -9,35 +9,22 @@ namespace ProyectoExamen.Modelos
     public class Alumno
     {
 
-        private double[] notas;
-
-        public double[] Notas
-        {
-            get { return notas; }
-            set { notas = value; }
-        }
+       
 
         public string nombreAlumno { get; set; }
 
-        private double promedio;
+        public double promedio { get; set; }
 
-        public double getPromedio(double promedio)
+        
+        public virtual void calcPromedio()
         {
-            return promedio;
+           
         }
 
-        public void calcPromedio(){
-
-            double suma = 0;
+        public override string ToString()
+        {
             
-            foreach(int i in notas)
-            {
-                suma += i;
-
-            }
-
-            promedio = suma / notas.Count();
-
+            return $"\nNombre del alumno: {nombreAlumno}, Promedio: {promedio}";
         }
 
 

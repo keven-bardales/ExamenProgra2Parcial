@@ -18,6 +18,19 @@ namespace ProyectoExamen.Modelos
             return $"Esta es la clase Padre";
         }
 
+        public Maestro maestroasignado { get; set; }
+
+        public virtual string listarAlumnos() {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"\nListado de Alumnos de Clase \nFase: {faseClase} \t Semana Clase: {semanaClase} Maestro: {maestroasignado.nombreMaestro}");
+            foreach (Alumno alumno in listaAlumnos)
+            {
+                sb.AppendLine($"{alumno.ToString()}");
+            }
+
+            return  sb.ToString();
+        }
+
 
     }
 }

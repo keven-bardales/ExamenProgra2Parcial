@@ -19,11 +19,24 @@ namespace ProyectoExamen.Modelos
         {
             foreach(Maestro maestro in maestroList)
             {
-                if(maestro.cuentaMaestro.nombreUsuario.Equals(nombreUsuario) && maestro.cuentaMaestro.contraUsuario.Equals(contraMaestro) {
+                if(maestro.cuentaMaestro.nombreUsuario.Equals(nombreUsuario) && maestro.cuentaMaestro.contraUsuario.Equals(contraMaestro)) {
                     return maestro;
                 }
             }
             return null;
+        }
+
+        public int loginGetMaestroActual(string nombreUsuario, string contraMaestro)
+        {
+            for (int i = 0; i < maestroList.Count; i++)
+            {
+                if(maestroList.ElementAt(i).cuentaMaestro.nombreUsuario.Equals(nombreUsuario) && maestroList.ElementAt(i).cuentaMaestro.contraUsuario.Equals(contraMaestro))
+                {
+                    return i;
+                }
+                
+            }
+            return -1;
         }
     }
 }
