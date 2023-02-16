@@ -63,7 +63,7 @@ listMaterias.Add(materia1);
 
 //Creamos una nueva lista de alumnos para la Materia 2
 
-listaAlumno = new List<Alumno>();
+List<Alumno> listaAlumno2 = new List<Alumno>();
 
 AlumnoDiasDeSemana a2 = new AlumnoDiasDeSemana()
 {
@@ -79,7 +79,7 @@ a2.SetNotas(new double[,] {{ 7.0, 8.0, 6.0, 5.0 },
 // 
 
 a2.calcPromedio();
-listaAlumno.Add(a2);
+listaAlumno2.Add(a2);
 
 a2 = new AlumnoDiasDeSemana()
 {
@@ -91,7 +91,7 @@ a2.SetNotas(new double[,] {{ 7.0, 8.0, 6.0, 5.0 },
                            { 6.0, 8.0, 9.0, 7.0 },
                            { 7.0, 6.0, 8.0, 9.0 }});
 a2.calcPromedio();
-listaAlumno.Add(a2);
+listaAlumno2.Add(a2);
 
 a2 = new AlumnoDiasDeSemana()
 {
@@ -103,10 +103,10 @@ a2.SetNotas(new double[,] {{ 8.0, 7.0, 6.0, 5.0 },
                            { 5.0, 4.0, 3.0, 2.0 },
                            { 4.0, 3.0, 2.0, 1.0 }});
 a2.calcPromedio();
-listaAlumno.Add(a2);
+listaAlumno2.Add(a2);
 
 
-listaAlumno.Add(a2);
+listaAlumno2.Add(a2);
 
 a2 = new AlumnoDiasDeSemana()
 {
@@ -119,7 +119,7 @@ a2.SetNotas(new double[,] {{ 6.0, 7.0, 8.0, 9.0 },
                            { 3.0, 4.0, 5.0, 6.0 },
                            { 2.0, 3.0, 4.0, 5.0 }});
 a2.calcPromedio();
-listaAlumno.Add(a2);
+listaAlumno2.Add(a2);
 
 //Se crea la clase de dia de semana
 
